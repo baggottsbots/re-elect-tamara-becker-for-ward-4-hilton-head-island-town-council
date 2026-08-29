@@ -1,5 +1,5 @@
 /* ==========================================================================
-       GLOBAL STYLES
+       GLOBAL STYLES — Bright island edition
        Mobile-first. Breakpoints: sm(640px) md(768px) lg(1024px) xl(1280px)
        ========================================================================== */
 
@@ -14,7 +14,7 @@
     ::selection { background: #C8102E; color: #FFFFFF; }
 
     /* ===== Accessible focus ring for keyboard users ===== */
-    :focus-visible { outline: 2px solid #E63946; outline-offset: 3px; border-radius: 4px; }
+    :focus-visible { outline: 2px solid #C8102E; outline-offset: 3px; border-radius: 4px; }
 
     /* ===== SCROLL PROGRESS BAR (top of viewport, red) ===== */
     #scroll-progress {
@@ -23,19 +23,31 @@
       transform-origin: left center; z-index: 80; pointer-events: none;
     }
 
-    /* ===== FILM GRAIN OVERLAY (subtle premium texture, pure SVG noise) ===== */
+    /* ===== FILM GRAIN OVERLAY (very subtle paper texture) ===== */
     .grain-overlay {
-      position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05;
+      position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .035;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
     }
 
-    /* ===== HERO BACKGROUND GLOWS (layered radial gradients) ===== */
-    .hero-glow {
-      background:
-        radial-gradient(60rem 40rem at 85% -10%, rgba(200,16,46,.16), transparent 60%),
-        radial-gradient(50rem 36rem at -10% 110%, rgba(26,54,96,.45), transparent 60%),
-        linear-gradient(180deg, #0B1E38 0%, #12294A 60%, #0B1E38 100%);
+    /* ===== HERO: bright island scene photo with sunlit overlay ===== */
+    .hero-island {
+      position: relative;
+      background: linear-gradient(180deg, #F2F7FB 0%, #FBFAF7 100%);
     }
+    .hero-island::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url('https://paymegpt.com/objects/quick-uploads/2/fcf2834e0a0651d1.png');
+      background-size: cover; background-position: center 65%;
+    }
+    .hero-island::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(251,250,247,.92) 0%,
+        rgba(251,250,247,.82) 35%,
+        rgba(251,250,247,.66) 60%,
+        rgba(251,250,247,.94) 100%);
+    }
+    .hero-island > * { position: relative; z-index: 2; }
 
     /* ===== TICKER / MARQUEE BAND (infinite horizontal scroll) ===== */
     @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -53,16 +65,16 @@
     /* ===== GHOST OUTLINE NUMBERS (decorative oversized numerals) ===== */
     .ghost-number {
       color: transparent;
-      -webkit-text-stroke: 1.5px rgba(230, 57, 70, .24);
+      -webkit-text-stroke: 1.5px rgba(200, 16, 46, .18);
       font-family: 'Fraunces', Georgia, serif;
       line-height: .8; user-select: none;
     }
 
-    /* ===== PRIORITIES SVG PATH (drawn on scroll, now a straight line) ===== */
+    /* ===== PRIORITIES SVG PATH (drawn on scroll, straight line) ===== */
     #priorities-line-path { stroke: #C8102E; }
     .tracer-dot {
       position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 9999px;
-      background: #D62839; box-shadow: 0 0 0 6px rgba(200,16,46,.25), 0 0 24px rgba(200,16,46,.6);
+      background: #D62839; box-shadow: 0 0 0 6px rgba(200,16,46,.18), 0 0 24px rgba(200,16,46,.45);
       z-index: 10; pointer-events: none;
     }
 
@@ -71,21 +83,21 @@
     .preset-active { background: #C8102E !important; color: #FFFFFF !important; border-color: #C8102E !important; }
 
     /* ===== NAV SCROLLED STATE (toggled by JS) ===== */
-    .nav-scrolled { background: rgba(11,30,56,.92); box-shadow: 0 8px 30px rgba(0,0,0,.35); }
+    .nav-scrolled { background: rgba(251,250,247,.92); box-shadow: 0 8px 30px rgba(11,30,56,.12); }
 
-    /* ===== MOBILE MENU OVERLAY TRANSITION ===== */
-    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; background: #0B1E38; }
+    /* ===== MOBILE MENU OVERLAY TRANSITION (bright) ===== */
+    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; background: #FBFAF7; }
     #mobile-menu.menu-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
     #mobile-menu.menu-visible { opacity: 1; visibility: visible; }
 
     /* ===== CARD HOVER LIFT (about + involvement cards) ===== */
     .lift-card { transition: transform .35s ease, box-shadow .35s ease; }
-    .lift-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -18px rgba(11,30,56,.28); }
+    .lift-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -18px rgba(11,30,56,.22); }
 
     /* ===== ENDORSEMENT SHORTS: portrait 9:16 video frames ===== */
     .short-frame {
       position: relative; width: 100%; aspect-ratio: 9 / 16;
-      border-radius: 1.25rem; overflow: hidden; background: rgba(0,0,0,.45);
-      box-shadow: 0 24px 60px -20px rgba(0,0,0,.55);
+      border-radius: 1.25rem; overflow: hidden; background: rgba(11,30,56,.08);
+      box-shadow: 0 24px 60px -20px rgba(11,30,56,.35);
     }
     .short-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
