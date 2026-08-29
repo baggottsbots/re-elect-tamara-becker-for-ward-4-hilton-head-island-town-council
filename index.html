@@ -21,7 +21,7 @@
   <!-- ===== TAILWIND CSS PLAY CDN ===== -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- ===== TAILWIND DESIGN TOKENS: campaign palette (teal / ocean / sand) ===== -->
+  <!-- ===== TAILWIND DESIGN TOKENS: campaign palette (navy / red / cream — matches palm card branding) ===== -->
   
 
   
@@ -258,13 +258,13 @@
   var apiBase='https://paymegpt.com';
   var currency='USD';
   var minAmt=100;var maxAmt=1000000;
-  var thankYouMsg='Thank you for your generous donation!';var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  var thankYouMsg='Thank you for your support! Your contribution to Tamara Becker\'s campaign makes a real difference for Ward 4.';var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
   function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
   function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
   var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
   function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
   function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
-  window.__donationConfig={currency:currency,presets:[25,50,100,250],minAmount:100/100,maxAmount:1000000/100,formatAmount:fmtD,buttonColor:'#4f46e5',buttonText:'Donate Now',thankYouMessage:'Thank you for your generous donation!'};
+  window.__donationConfig={currency:currency,presets:[25,50,100,250,500],minAmount:100/100,maxAmount:1000000/100,formatAmount:fmtD,buttonColor:'#1D99C4',buttonText:'Donate Now',thankYouMessage:'Thank you for your support! Your contribution to Tamara Becker\'s campaign makes a real difference for Ward 4.'};
   function findDonEmail2(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
   function findDonName2(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
   function findDonPhone2(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
@@ -424,7 +424,7 @@
         <a href="#platform" class="text-white/80 hover:text-ocean-300 transition-colors">Platform</a>
         <a href="#results" class="text-white/80 hover:text-ocean-300 transition-colors">Results</a>
         <a href="#get-involved" class="text-white/80 hover:text-ocean-300 transition-colors">Get Involved</a>
-        <a href="#donate" class="bg-ocean-500 hover:bg-ocean-400 text-teal-950 font-bold px-5 py-2.5 rounded-full transition-colors">Donate</a>
+        <a href="#donate" class="bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-5 py-2.5 rounded-full transition-colors">Donate</a>
       </div>
 
       <!-- Mobile hamburger button -->
@@ -444,15 +444,13 @@
     <a href="#platform" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Platform</a>
     <a href="#results" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Results</a>
     <a href="#get-involved" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Get Involved</a>
-    <a href="#donate" class="mobile-link bg-ocean-500 text-teal-950 font-bold text-xl px-10 py-4 rounded-full">Donate</a>
+    <a href="#donate" class="mobile-link bg-ocean-500 text-white font-bold text-xl px-10 py-4 rounded-full">Donate</a>
   </div>
 
   <main>
 
     <!-- ============================================================================ -->
     <!-- HERO SECTION: Full-viewport intro with animated headline, CTAs, and stats    -->
-    <!-- Features: GSAP SplitText char reveal, rotating seal, counter, scroll cue     -->
-    <!-- Mobile Padding: px-4+ ensures headline never clips at 375px                  -->
     <!-- ============================================================================ -->
     <section data-section="hero" id="home" class="hero-glow relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-14">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full relative z-10">
@@ -469,7 +467,6 @@
         <div class="flex flex-row items-center gap-2 sm:gap-5 lg:gap-8">
           <!-- Left: headline -->
           <div class="flex-1 min-w-0">
-            <!-- Main headline (SplitText animated on load) -->
             <h1 id="hero-headline" class="font-display font-semibold text-[clamp(1.9rem,7.5vw,6.5rem)] leading-[1.02] tracking-tight">
               <span class="block">Results That</span>
               <span class="block">Matter. Leadership</span>
@@ -477,38 +474,34 @@
             </h1>
           </div>
 
-          <!-- Right: Tamara Becker portrait (transparent PNG), sized down on mobile, larger on desktop -->
+          <!-- Right: Tamara Becker portrait (transparent PNG) -->
           <div class="hero-portrait shrink-0 w-44 xs:w-48 sm:w-64 md:w-72 lg:w-[26rem] xl:w-[29rem]">
             <img src="https://paymegpt.com/objects/quick-uploads/2/42826663da93f9e0.png" alt="Tamara Becker" class="w-full h-auto object-contain">
           </div>
         </div>
 
-        <!-- Supporting copy: centered below the headline + portrait row -->
+        <!-- Supporting copy -->
         <p class="hero-sub mt-7 max-w-2xl mx-auto text-center text-base sm:text-lg text-white/75 leading-relaxed">
           Three years of proven results for Ward 4. Fiscal conservatism. Island preservation. Pragmatic growth management. I've delivered for you before—and I'm ready to do it again.
         </p>
 
-        <!-- Primary CTA: centered below the headline + portrait row -->
+        <!-- Primary CTA -->
         <div class="hero-cta mt-7 w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-          <a href="#get-involved" class="bg-ocean-500 hover:bg-ocean-400 text-teal-950 font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(29,153,196,.55)] text-center">Join the Campaign</a>
+          <a href="#get-involved" class="bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(200,16,46,.55)] text-center">Join the Campaign</a>
         </div>
 
         <!-- Credential stats row -->
         <div class="mt-16 pt-10 border-t border-white/10 grid gap-8 md:grid-cols-3">
-          <!-- Stat 1: animated counter -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-ocean-300"><span class="counter" data-target="8">0</span> <span class="text-2xl sm:text-3xl text-white">Years</span></p>
             <p class="mt-2 text-sm text-white/60 leading-relaxed">Serving Ward 4 with proven, pragmatic leadership</p>
           </div>
-          <!-- Stat 2 -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-white">100% <span class="text-ocean-300">Fiscal</span></p>
             <p class="mt-2 text-sm text-white/60 leading-relaxed">Committed to conservative budgeting and smart spending</p>
           </div>
-          <!-- Stat 3 -->
           <div class="hero-stat">
             <p class="font-display text-4xl sm:text-5xl font-semibold text-white">Preservation <span class="text-ocean-300">First</span></p>
-
             <p class="mt-2 text-sm text-white/60 leading-relaxed">Protecting the island's natural beauty and character</p>
           </div>
         </div>
@@ -522,10 +515,10 @@
     </section>
 
     <!-- ============================================================================ -->
-    <!-- TICKER BAND: Rotated ocean marquee with campaign slogans (pure CSS motion)    -->
+    <!-- TICKER BAND: Rotated red marquee with campaign slogans (pure CSS motion)      -->
     <!-- ============================================================================ -->
     <div data-section="ticker" class="relative z-20 -my-4 overflow-hidden">
-      <div class="ticker-band bg-ocean-500 text-teal-950 py-3.5 border-y-4 border-teal-950">
+      <div class="ticker-band bg-ocean-500 text-white py-3.5 border-y-4 border-teal-950">
         <div class="ticker-track font-display font-semibold text-lg sm:text-xl tracking-wide">
           <span class="whitespace-nowrap pr-8">PROVEN RESULTS ★ FISCAL CONSERVATISM ★ ISLAND PRESERVATION ★&nbsp;</span>
           <span class="whitespace-nowrap pr-8" aria-hidden="true">PROVEN RESULTS ★ FISCAL CONSERVATISM ★ ISLAND PRESERVATION ★&nbsp;</span>
@@ -535,7 +528,6 @@
 
     <!-- ============================================================================ -->
     <!-- ABOUT SECTION: Bio narrative + three credential cards                        -->
-    <!-- Features: Scroll batch reveals, hover lift cards, fact chips                 -->
     <!-- ============================================================================ -->
     <section data-section="about" id="about" class="bg-sand-50 text-teal-900 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid gap-14 lg:grid-cols-2 lg:gap-20">
@@ -543,7 +535,7 @@
         <!-- Left column: narrative -->
         <div class="reveal">
           <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-4">About Tamara</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-teal-900">Delivering for Ward 4.<br><span class="font-display font-bold text-ocean-600">Eight years of results.</span></h2>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-teal-900">Delivering for Ward&nbsp;4.<br class="hidden sm:block"><span class="font-display font-bold text-ocean-600"> Eight years of results.</span></h2>
           <p class="mt-6 text-teal-800/80 leading-relaxed">
             As your Ward 4 Town Council representative, I've fought hard to balance growth with preservation, protect our neighborhoods while welcoming tourism, and manage our town's finances responsibly. My focus has always been on what's best for the residents of Sea Pines, South Forest Beach, and the Coligny area.
           </p>
@@ -554,7 +546,7 @@
           <div class="mt-8 flex flex-wrap gap-3">
             <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Dedicated to Fiscal Conservatism</span>
             <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Island Preservation Advocate</span>
-            <span class="text-xs font-semibold uppercase tracking-wider bg-ocean-500 text-teal-950 px-4 py-2 rounded-full">Ward 4 Resident, Eight Years of Service</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-ocean-500 text-white px-4 py-2 rounded-full">Ward 4 Resident, Eight Years of Service</span>
           </div>
           <p class="mt-8 font-display italic text-2xl text-teal-800">— Tamara Becker</p>
         </div>
@@ -579,7 +571,7 @@
           <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">03</span>
             <h3 class="font-display font-semibold text-2xl relative">Accessible, responsive leadership</h3>
-            <p class="mt-3 text-teal-800/75 leading-relaxed">Available to my constituents. Listening to your concerns. Accessible by email at tamarab@hiltonheadislandsc.gov and always ready to represent your voice on the council.</p>
+            <p class="mt-3 text-teal-800/75 leading-relaxed">Available to my constituents. Listening to your concerns. Accessible by email at tammy4ward4@gmail.com and always ready to represent your voice on the council.</p>
             <div class="mt-5 h-1 w-16 bg-ocean-500 rounded-full"></div>
           </article>
         </div>
@@ -588,16 +580,13 @@
 
     <!-- ============================================================================ -->
     <!-- QUOTE BAND: Full-bleed island image with scrubbed parallax + pull quote     -->
-    <!-- Features: GSAP scrub parallax (real imagery), content fade-up on entry       -->
     <!-- ============================================================================ -->
     <section data-section="quote-band" class="relative h-[70vh] min-h-[480px] overflow-hidden flex items-center justify-center">
-      <!-- Parallax image layer (taller than viewport so it can travel) -->
       <div class="absolute inset-0">
         <img id="quote-parallax-img" src="https://paymegpt.com/objects/quick-uploads/2/fcf2834e0a0651d1.png" alt="Hilton Head Island" class="w-full h-[135%] object-cover -mt-[8%]" loading="lazy">
       </div>
       <div class="absolute inset-0 bg-teal-950/70" aria-hidden="true"></div>
 
-      <!-- Pull quote -->
       <div class="quote-content relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
         <svg viewBox="0 0 24 24" class="w-10 h-10 mx-auto mb-6 text-ocean-300" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 00-3 3v7h7v-7H7c0-1.7 1.3-3 3-3V7zm11 0h-4a3 3 0 00-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7z"></path></svg>
         <blockquote class="font-display font-semibold text-2xl sm:text-4xl lg:text-[2.75rem] leading-snug">
@@ -609,7 +598,6 @@
 
     <!-- ============================================================================ -->
     <!-- ENDORSEMENT VIDEO SECTION: Tom Davis endorsement (prominent placement)       -->
-    <!-- Features: Responsive video embed with intro copy                             -->
     <!-- ============================================================================ -->
     <section data-section="endorsement" class="bg-teal-950 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -619,7 +607,6 @@
           <p class="mt-5 text-white/70 leading-relaxed">Hear from South Carolina State Senator Tom Davis about why he's supporting Tamara Becker's re-election.</p>
         </div>
 
-        <!-- Video container -->
         <div class="reveal max-w-4xl mx-auto">
           <div class="relative w-full overflow-hidden rounded-2xl bg-black/40 aspect-video">
             <iframe class="w-full h-full" src="https://www.youtube.com/embed/3IAU91yGpmY?rel=0" title="Tom Davis Endorsement for Tamara Becker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -630,7 +617,6 @@
 
     <!-- ============================================================================ -->
     <!-- PLATFORM SECTION: Pinned horizontal snap strip (GSAP ScrollTrigger)          -->
-    <!-- Features: 4 full-viewport panels, scrubbed horizontal scroll, snap, dots     -->
     <!-- ============================================================================ -->
     <section data-section="platform" id="platform" class="relative bg-teal-950 overflow-hidden">
       <div class="hstrip flex" style="width: 500vw;">
@@ -714,11 +700,11 @@
             <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Accessible Leadership</h3>
             <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Always available to listen. Responsive to your concerns. Dedicated to representing your voice on the Town Council.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Email always open at tamarab@hiltonheadislandsc.gov</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Email always open at tammy4ward4@gmail.com</li>
               <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Regular listening sessions and direct engagement with constituents</li>
               <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Your concerns matter—always ready to advocate for Ward 4</li>
             </ul>
-            <a href="#get-involved" class="panel-anim inline-block mt-9 bg-ocean-500 hover:bg-ocean-400 text-teal-950 font-bold px-8 py-3.5 rounded-full transition-colors">Get Involved</a>
+            <a href="#get-involved" class="panel-anim inline-block mt-9 bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-8 py-3.5 rounded-full transition-colors">Get Involved</a>
           </div>
         </div>
       </div>
@@ -734,8 +720,7 @@
     </section>
 
     <!-- ============================================================================ -->
-    <!-- RESULTS SECTION: "What We've Accomplished" with scroll-drawn SVG timeline    -->
-    <!-- Features: Scrubbed stroke-dashoffset draw, glowing tracer dot, card reveals  -->
+    <!-- RESULTS SECTION: "What We've Accomplished" with scroll-drawn straight timeline -->
     <!-- ============================================================================ -->
     <section data-section="results" id="results" class="bg-sand-50 text-teal-900 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -748,15 +733,15 @@
           <a href="#platform" class="inline-block mt-7 border-2 border-teal-900 text-teal-900 hover:bg-teal-900 hover:text-sand-50 font-semibold px-7 py-3 rounded-full transition-colors">Explore the full platform</a>
         </div>
 
-        <!-- Timeline track: SVG line + tracer + milestone cards -->
+        <!-- Timeline track: SVG line (now straight) + tracer + milestone cards -->
         <div id="priorities-track" class="relative mt-20">
 
-          <!-- Drawn path (S-curve down the section) -->
+          <!-- Drawn path (straight vertical line down the section) -->
           <svg class="absolute top-0 left-3 w-8 h-full md:left-1/2 md:w-24 md:-translate-x-1/2" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
             <!-- Faint full-length track -->
-            <path d="M50,0 C82,120 18,240 50,360 C82,480 18,600 50,720 C82,840 18,920 50,1000" fill="none" stroke="rgba(10,52,80,.12)" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"></path>
-            <!-- Ocean progress line (drawn on scroll) -->
-            <path id="priorities-line-path" d="M50,0 C82,120 18,240 50,360 C82,480 18,600 50,720 C82,840 18,920 50,1000" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"></path>
+            <path d="M50,0 L50,1000" fill="none" stroke="rgba(11,30,56,.12)" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"></path>
+            <!-- Red progress line (drawn on scroll) -->
+            <path id="priorities-line-path" d="M50,0 L50,1000" fill="none" stroke-width="3" vector-effect="non-scaling-stroke" stroke-linecap="round"></path>
           </svg>
 
           <!-- Glowing tracer dot riding the line (MotionPathPlugin) -->
@@ -792,7 +777,7 @@
                 <svg viewBox="0 0 24 24" class="w-9 h-9 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
               </div>
               <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Listened and stayed accessible</h3>
-              <p class="mt-3 text-teal-800/75 leading-relaxed">Always available at tamarab@hiltonheadislandsc.gov. Responsive to your concerns. Your voice matters, and I'm here to advocate for you.</p>
+              <p class="mt-3 text-teal-800/75 leading-relaxed">Always available at tammy4ward4@gmail.com. Responsive to your concerns. Your voice matters, and I'm here to advocate for you.</p>
             </article>
           </div>
         </div>
@@ -801,11 +786,9 @@
 
     <!-- ============================================================================ -->
     <!-- DONATE SECTION: Preset + custom contribution with Stripe checkout            -->
-    <!-- Features: Dynamic presets from __donationConfig, __processDonation() call    -->
-    <!-- REQUIRES: Email input (rendered below) before any donation is processed      -->
     <!-- ============================================================================ -->
     <section data-section="donate" id="donate" class="relative bg-teal-900 py-24 sm:py-32 overflow-hidden">
-      <!-- Decorative ocean glow -->
+      <!-- Decorative red glow -->
       <div class="absolute -top-40 -right-40 w-[34rem] h-[34rem] rounded-full bg-ocean-500/10 blur-3xl" aria-hidden="true"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid gap-14 lg:grid-cols-2 lg:gap-20 items-center relative z-10">
@@ -857,7 +840,7 @@
           </div>
 
           <!-- Submit -->
-          <button id="donate-button" type="button" class="mt-6 w-full bg-ocean-500 hover:bg-ocean-400 text-teal-950 font-bold text-lg py-4 rounded-xl transition-all hover:shadow-[0_16px_40px_-12px_rgba(29,153,196,.6)]">
+          <button id="donate-button" type="button" class="mt-6 w-full bg-ocean-500 hover:bg-ocean-400 text-white font-bold text-lg py-4 rounded-xl transition-all hover:shadow-[0_16px_40px_-12px_rgba(200,16,46,.6)]">
             <span id="donate-button-label">Donate $100</span>
           </button>
 
@@ -871,7 +854,6 @@
 
     <!-- ============================================================================ -->
     <!-- GET INVOLVED SECTION: Volunteer pitch + supporter contact form               -->
-    <!-- Features: fetch() POST to webhook, loading state, inline success message     -->
     <!-- ============================================================================ -->
     <section data-section="get-involved" id="get-involved" class="bg-sand-50 text-teal-900 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid gap-14 lg:grid-cols-2 lg:gap-20">
@@ -900,7 +882,7 @@
 
           <p class="mt-9 flex items-center gap-3 text-teal-800/80">
             <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg>
-            <span>Questions? Email us at <a href="mailto:tamarab@hiltonheadislandsc.gov" class="font-semibold text-teal-900 underline decoration-ocean-500 decoration-2 underline-offset-4 hover:text-ocean-600 transition-colors">tamarab@hiltonheadislandsc.gov</a></span>
+            <span>Questions? Email us at <a href="mailto:tammy4ward4@gmail.com" class="font-semibold text-teal-900 underline decoration-ocean-500 decoration-2 underline-offset-4 hover:text-ocean-600 transition-colors">tammy4ward4@gmail.com</a></span>
           </p>
         </div>
 
@@ -994,7 +976,7 @@
           <ul class="space-y-3.5 text-sm text-white/70">
             <li class="flex items-center gap-3">
               <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-300 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg>
-              <a href="mailto:tamarab@hiltonheadislandsc.gov" class="hover:text-ocean-300 transition-colors">tamarab@hiltonheadislandsc.gov</a>
+              <a href="mailto:tammy4ward4@gmail.com" class="hover:text-ocean-300 transition-colors">tammy4ward4@gmail.com</a>
             </li>
             <li class="flex items-center gap-3">
               <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-300 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -1014,7 +996,6 @@
 
   <!-- ========================================================================== -->
   <!-- ANIMATION LIBRARIES: GSAP core + ScrollTrigger + MotionPath + SplitText     -->
-  <!-- (pinned CDN versions only)                                                  -->
   <!-- ========================================================================== -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
@@ -1025,20 +1006,14 @@
   <!-- MAIN SCRIPT: scroll scenes, interactions, donations, and form handling      -->
   <!-- ========================================================================== -->
   <script>
-    // Register all GSAP plugins used on this page
     gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, SplitText);
 
-    /* ===== SCROLL PROGRESS BAR =====
-       Function: ocean bar scaleX tied to total page scroll (decorative). */
     gsap.set('#scroll-progress', { scaleX: 0 });
     gsap.to('#scroll-progress', {
       scaleX: 1, ease: 'none',
       scrollTrigger: { start: 0, end: 'max', scrub: 0.3 }
     });
 
-    /* ===== NAVBAR SCROLLED STATE =====
-       Function: toggleNavBg() — adds solid teal background after 40px of scroll.
-       Triggers: window scroll. */
     (function () {
       var nav = document.getElementById('site-nav');
       function toggleNavBg() {
@@ -1049,9 +1024,6 @@
       toggleNavBg();
     })();
 
-    /* ===== MOBILE MENU TOGGLE =====
-       Function: openMenu() / closeMenu() — show/hide the full-screen nav overlay.
-       Triggers: hamburger tap, close tap, any mobile link tap. */
     (function () {
       var menu = document.getElementById('mobile-menu');
       var toggle = document.getElementById('menu-toggle');
@@ -1072,10 +1044,6 @@
       });
     })();
 
-    /* ===== HERO INTRO TIMELINE =====
-       Function: plays on page load — badge, SplitText headline chars, sub copy,
-       CTAs, stat cards, seal, and scroll cue stagger in from hidden states.
-       Initial hidden states are set from JS only (page is readable without JS). */
     (function () {
       var headlineChars = null;
       try {
@@ -1097,9 +1065,6 @@
            .from('.scroll-cue', { autoAlpha: 0, y: 10, duration: 0.5 }, '-=0.4');
     })();
 
-    /* ===== ANIMATED STAT COUNTERS =====
-       Function: counts .counter elements from 0 to their data-target value
-       when they scroll into view (once). */
     document.querySelectorAll('.counter').forEach(function (el) {
       var target = parseInt(el.getAttribute('data-target'), 10) || 0;
       var obj = { val: 0 };
@@ -1114,9 +1079,6 @@
       });
     });
 
-    /* ===== SCROLL REVEALS (canonical batch pattern) =====
-       Function: elements with .reveal start hidden + offset 48px, then tween in
-       with a 0.12s stagger as they enter the viewport. Runs once per element. */
     gsap.set('.reveal', { autoAlpha: 0, y: 48 });
     ScrollTrigger.batch('.reveal', {
       start: 'top 85%', once: true,
@@ -1125,9 +1087,6 @@
       }
     });
 
-    /* ===== QUOTE BAND PARALLAX =====
-       Function: the coastal image travels at a visibly different rate than the
-       foreground quote while the band scrolls through the viewport (scrubbed). */
     gsap.to('#quote-parallax-img', {
       yPercent: 22, ease: 'none',
       scrollTrigger: { trigger: '[data-section="quote-band"]', start: 'top bottom', end: 'bottom top', scrub: true }
@@ -1137,10 +1096,6 @@
       scrollTrigger: { trigger: '[data-section="quote-band"]', start: 'top 70%', once: true }
     });
 
-    /* ===== HORIZONTAL PLATFORM STRIP (pinned marquee moment) =====
-       Function: 4 full-viewport panels scrub horizontally while the section is
-       pinned, with snap between panels, progress dots, per-panel content
-       reveals (containerAnimation), and ghost-number parallax. */
     (function () {
       var panels = gsap.utils.toArray('.platform-panel');
       var dots = document.querySelectorAll('.strip-dot');
@@ -1167,7 +1122,6 @@
         }
       });
 
-      // Per-panel inner content reveals tied to the horizontal container animation
       panels.forEach(function (panel) {
         var items = panel.querySelectorAll('.panel-anim');
         gsap.from(items, {
@@ -1177,7 +1131,6 @@
             start: 'left 75%', toggleActions: 'play none none reverse'
           }
         });
-        // Subtle parallax drift on the oversized ghost numbers
         var ghost = panel.querySelector('.ghost-number');
         if (ghost) {
           gsap.fromTo(ghost, { xPercent: 8 }, {
@@ -1191,9 +1144,7 @@
       });
     })();
 
-    /* ===== RESULTS SVG PATH DRAW + TRACER DOT =====
-       Function: the ocean S-curve draws itself (strokeDashoffset scrub) while a
-       glowing dot rides the path via MotionPathPlugin across the timeline. */
+    /* ===== RESULTS SVG PATH DRAW + TRACER DOT (now animates along a straight vertical line) ===== */
     (function () {
       var line = document.getElementById('priorities-line-path');
       if (!line) return;
@@ -1213,11 +1164,6 @@
         .to('.tracer-dot', { autoAlpha: 0, duration: 0.05 }, 0.96);
     })();
 
-    /* ===== DONATION MODULE =====
-       Function: initDonations() — renders preset buttons from the platform's
-       window.__donationConfig.presets, manages selection + custom amount state,
-       validates the required email, then calls window.__processDonation()
-       (object form, amount in DOLLARS) to launch Stripe Checkout. */
     (function initDonations() {
       var cfg = window.__donationConfig || {};
       var presets = (Array.isArray(cfg.presets) && cfg.presets.length) ? cfg.presets : [25, 50, 100, 250, 500];
@@ -1229,7 +1175,6 @@
       var label = document.getElementById('donate-button-label');
       var status = document.getElementById('donate-status');
 
-      // Default selection: $100 if present, otherwise the middle preset
       var selected = presets.indexOf(100) !== -1 ? 100 : presets[Math.floor(presets.length / 2)];
 
       function setStatus(kind, msg) {
@@ -1242,7 +1187,6 @@
         status.textContent = msg;
       }
 
-      // Refresh button active states + dynamic button label ("Donate $X")
       function refresh() {
         var custom = parseFloat(customInput.value);
         var effective = (!isNaN(custom) && custom > 0) ? custom : selected;
@@ -1253,7 +1197,6 @@
         label.textContent = 'Donate $' + (effective ? effective : '');
       }
 
-      // Render one button per preset amount (in dollars)
       presets.forEach(function (amount) {
         var b = document.createElement('button');
         b.type = 'button';
@@ -1268,11 +1211,9 @@
         container.appendChild(b);
       });
 
-      // Typing a custom amount deselects presets
       customInput.addEventListener('input', refresh);
       refresh();
 
-      // Launch Stripe Checkout via the platform-injected processor
       btn.addEventListener('click', function () {
         var custom = parseFloat(customInput.value);
         var amount = (!isNaN(custom) && custom > 0) ? custom : selected;
@@ -1296,7 +1237,6 @@
           setStatus('error', 'Donation processing is temporarily unavailable. Please try again shortly.');
           return;
         }
-        // Object form with amount in DOLLARS (matches Settings UI)
         window.__processDonation({
           amount: amount,
           email: email,
@@ -1306,10 +1246,6 @@
       });
     })();
 
-    /* ===== SUPPORTER FORM (campaign webhook) =====
-       Function: POSTs supporter details as JSON to the configured webhook
-       (window.__formWebhookUrl override, else the campaign endpoint), with
-       loading, success (form hides), and error states. */
     (function () {
       var form = document.getElementById('supporter-form');
       var statusEl = document.getElementById('form-status');
@@ -1373,9 +1309,6 @@
       });
     })();
 
-    /* ===== LAYOUT REFRESH =====
-       Function: recalculates ScrollTrigger positions once all fonts/images load
-       so pinned scenes and reveals stay pixel-accurate. */
     window.addEventListener('load', function () { ScrollTrigger.refresh(); });
   </script>
 
