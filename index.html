@@ -419,9 +419,10 @@
       </a>
 
       <!-- Desktop links (same-page anchors only) -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium">
         <a href="#about" class="text-white/80 hover:text-ocean-300 transition-colors">About</a>
         <a href="#platform" class="text-white/80 hover:text-ocean-300 transition-colors">Platform</a>
+        <a href="#endorsements" class="text-white/80 hover:text-ocean-300 transition-colors">Endorsements</a>
         <a href="#results" class="text-white/80 hover:text-ocean-300 transition-colors">Results</a>
         <a href="#get-involved" class="text-white/80 hover:text-ocean-300 transition-colors">Get Involved</a>
         <a href="#donate" class="bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-5 py-2.5 rounded-full transition-colors">Donate</a>
@@ -438,13 +439,23 @@
   </nav>
 
   <!-- Mobile menu overlay: direct child of body so the fixed navbar's stacking context can't affect it -->
-  <div id="mobile-menu" class="menu-hidden fixed inset-0 z-[100] bg-teal-950 flex flex-col items-center justify-center gap-8">
+  <div id="mobile-menu" class="menu-hidden fixed inset-0 z-[100] bg-teal-950 flex flex-col items-center justify-center gap-7">
     <button id="menu-close" class="absolute top-5 right-4 w-11 h-11 rounded-lg border border-white/20 text-2xl leading-none text-white" aria-label="Close menu">×</button>
-    <a href="#about" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">About</a>
-    <a href="#platform" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Platform</a>
-    <a href="#results" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Results</a>
-    <a href="#get-involved" class="mobile-link font-display text-4xl text-white hover:text-ocean-300 transition-colors">Get Involved</a>
+    <a href="#about" class="mobile-link font-display text-3xl sm:text-4xl text-white hover:text-ocean-300 transition-colors">About</a>
+    <a href="#platform" class="mobile-link font-display text-3xl sm:text-4xl text-white hover:text-ocean-300 transition-colors">Platform</a>
+    <a href="#endorsements" class="mobile-link font-display text-3xl sm:text-4xl text-white hover:text-ocean-300 transition-colors">Endorsements</a>
+    <a href="#results" class="mobile-link font-display text-3xl sm:text-4xl text-white hover:text-ocean-300 transition-colors">Results</a>
+    <a href="#get-involved" class="mobile-link font-display text-3xl sm:text-4xl text-white hover:text-ocean-300 transition-colors">Get Involved</a>
     <a href="#donate" class="mobile-link bg-ocean-500 text-white font-bold text-xl px-10 py-4 rounded-full">Donate</a>
+    <!-- Social links (mobile menu) -->
+    <div class="flex items-center gap-5 mt-2">
+      <a href="https://www.facebook.com/reelecttammy2022" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on Facebook" class="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-ocean-300 hover:border-ocean-300 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"></path></svg>
+      </a>
+      <a href="https://www.youtube.com/@beckerhhi" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on YouTube" class="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-ocean-300 hover:border-ocean-300 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></svg>
+      </a>
+    </div>
   </div>
 
   <main>
@@ -482,12 +493,13 @@
 
         <!-- Supporting copy -->
         <p class="hero-sub mt-7 max-w-2xl mx-auto text-center text-base sm:text-lg text-white/75 leading-relaxed">
-          Three years of proven results for Ward 4. Fiscal conservatism. Island preservation. Pragmatic growth management. I've delivered for you before—and I'm ready to do it again.
+          Eight years of proven results for Hilton Head Island: a unanimous AAA credit rating, property taxes lowered twice, and 120+ acres of open space preserved. I've delivered for you before—and I'm ready to do it again.
         </p>
 
-        <!-- Primary CTA -->
+        <!-- Primary CTAs -->
         <div class="hero-cta mt-7 w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a href="#get-involved" class="bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all hover:shadow-[0_16px_40px_-12px_rgba(200,16,46,.55)] text-center">Join the Campaign</a>
+          <a href="https://donate.stripe.com/4gMeVc59gd7p9RQdOb8k800" target="_blank" rel="noopener noreferrer" class="border-2 border-ocean-400 text-ocean-300 hover:bg-ocean-500 hover:border-ocean-500 hover:text-white font-bold px-5 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base transition-all text-center">Donate Now</a>
         </div>
 
         <!-- Credential stats row -->
@@ -497,12 +509,12 @@
             <p class="mt-2 text-sm text-white/60 leading-relaxed">Serving Ward 4 with proven, pragmatic leadership</p>
           </div>
           <div class="hero-stat">
-            <p class="font-display text-4xl sm:text-5xl font-semibold text-white">100% <span class="text-ocean-300">Fiscal</span></p>
-            <p class="mt-2 text-sm text-white/60 leading-relaxed">Committed to conservative budgeting and smart spending</p>
+            <p class="font-display text-4xl sm:text-5xl font-semibold text-white">AAA <span class="text-ocean-300">Rated</span></p>
+            <p class="mt-2 text-sm text-white/60 leading-relaxed">Unanimous AAA credit rating from all three major rating agencies</p>
           </div>
           <div class="hero-stat">
-            <p class="font-display text-4xl sm:text-5xl font-semibold text-white">Preservation <span class="text-ocean-300">First</span></p>
-            <p class="mt-2 text-sm text-white/60 leading-relaxed">Protecting the island's natural beauty and character</p>
+            <p class="font-display text-4xl sm:text-5xl font-semibold text-ocean-300"><span class="counter" data-target="120">0</span>+ <span class="text-2xl sm:text-3xl text-white">Acres</span></p>
+            <p class="mt-2 text-sm text-white/60 leading-relaxed">Open space preserved to stop overdevelopment on Hilton Head</p>
           </div>
         </div>
       </div>
@@ -520,8 +532,8 @@
     <div data-section="ticker" class="relative z-20 -my-4 overflow-hidden">
       <div class="ticker-band bg-ocean-500 text-white py-3.5 border-y-4 border-teal-950">
         <div class="ticker-track font-display font-semibold text-lg sm:text-xl tracking-wide">
-          <span class="whitespace-nowrap pr-8">PROVEN RESULTS ★ FISCAL CONSERVATISM ★ ISLAND PRESERVATION ★&nbsp;</span>
-          <span class="whitespace-nowrap pr-8" aria-hidden="true">PROVEN RESULTS ★ FISCAL CONSERVATISM ★ ISLAND PRESERVATION ★&nbsp;</span>
+          <span class="whitespace-nowrap pr-8">AAA CREDIT RATING ★ PROPERTY TAXES LOWERED TWICE ★ 120+ ACRES PRESERVED ★ SHE DELIVERS! ★&nbsp;</span>
+          <span class="whitespace-nowrap pr-8" aria-hidden="true">AAA CREDIT RATING ★ PROPERTY TAXES LOWERED TWICE ★ 120+ ACRES PRESERVED ★ SHE DELIVERS! ★&nbsp;</span>
         </div>
       </div>
     </div>
@@ -537,15 +549,15 @@
           <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-4">About Tamara</p>
           <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-teal-900">Delivering for Ward&nbsp;4.<br class="hidden sm:block"><span class="font-display font-bold text-ocean-600"> Eight years of results.</span></h2>
           <p class="mt-6 text-teal-800/80 leading-relaxed">
-            As your Ward 4 Town Council representative, I've fought hard to balance growth with preservation, protect our neighborhoods while welcoming tourism, and manage our town's finances responsibly. My focus has always been on what's best for the residents of Sea Pines, South Forest Beach, and the Coligny area.
+            Eight years ago, I pledged to always answer every call, show up, and address the issues for the residents of Hilton Head Island. I vowed to make municipal government work for you, to protect our unique environment, and to put residents first—always. Today, the results are clear: I have delivered.
           </p>
           <p class="mt-4 text-teal-800/80 leading-relaxed">
-            I believe in listening to my neighbors, being accessible, and making decisions based on facts, not politics. This November, I'm asking for your vote so I can continue the work we've started and keep fighting for the island we all love.
+            This is what proven conservative leadership looks like: less tax burden, safer streets, protected green space, and unmatched fiscal stability. I'm humbly asking for your vote on November 3, 2026 to continue what we've started and deliver results for four more years.
           </p>
           <!-- Fact chips -->
           <div class="mt-8 flex flex-wrap gap-3">
-            <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Dedicated to Fiscal Conservatism</span>
-            <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Island Preservation Advocate</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Integrity · Dedication · Honesty</span>
+            <span class="text-xs font-semibold uppercase tracking-wider bg-teal-900 text-sand-50 px-4 py-2 rounded-full">Trusted Leadership That Delivers</span>
             <span class="text-xs font-semibold uppercase tracking-wider bg-ocean-500 text-white px-4 py-2 rounded-full">Ward 4 Resident, Eight Years of Service</span>
           </div>
           <p class="mt-8 font-display italic text-2xl text-teal-800">— Tamara Becker</p>
@@ -557,21 +569,21 @@
           <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">01</span>
             <h3 class="font-display font-semibold text-2xl relative">Fiscal responsibility that works</h3>
-            <p class="mt-3 text-teal-800/75 leading-relaxed">Conservative budgeting, transparent spending, and smart allocation of town resources. Eight years of voting for responsible growth and defending taxpayers' interests.</p>
+            <p class="mt-3 text-teal-800/75 leading-relaxed">A unanimous AAA credit rating from all three major rating agencies, increased reserves in every municipal fund category, and property tax rates lowered twice.</p>
             <div class="mt-5 h-1 w-16 bg-ocean-500 rounded-full"></div>
           </article>
           <!-- Card 02 -->
           <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">02</span>
             <h3 class="font-display font-semibold text-2xl relative">Preserving our island's character</h3>
-            <p class="mt-3 text-teal-800/75 leading-relaxed">Balancing tourism's vital role in our economy with protection for neighborhoods and natural spaces. Supporting managed growth that respects what makes Hilton Head special.</p>
+            <p class="mt-3 text-teal-800/75 leading-relaxed">Over 120 acres of open space preserved, dozens of Land Management Ordinance (LMO) amendments passed, and high-density growth stopped to protect what makes Hilton Head special.</p>
             <div class="mt-5 h-1 w-16 bg-ocean-500 rounded-full"></div>
           </article>
           <!-- Card 03 -->
           <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-8 relative overflow-hidden">
             <span class="ghost-number absolute -right-2 -top-4 text-8xl" aria-hidden="true">03</span>
-            <h3 class="font-display font-semibold text-2xl relative">Accessible, responsive leadership</h3>
-            <p class="mt-3 text-teal-800/75 leading-relaxed">Available to my constituents. Listening to your concerns. Accessible by email at tammy4ward4@gmail.com and always ready to represent your voice on the council.</p>
+            <h3 class="font-display font-semibold text-2xl relative">Proactive public safety</h3>
+            <p class="mt-3 text-teal-800/75 leading-relaxed">Initiated and funded an island-wide public safety assessment, launched William Hilton Parkway (WHP) corridor infrastructure plans, and upgraded multi-modal pathways for drivers, bicyclists, and pedestrians.</p>
             <div class="mt-5 h-1 w-16 bg-ocean-500 rounded-full"></div>
           </article>
         </div>
@@ -597,20 +609,69 @@
     </section>
 
     <!-- ============================================================================ -->
-    <!-- ENDORSEMENT VIDEO SECTION: Tom Davis endorsement (prominent placement)       -->
+    <!-- MAIN VIDEO SECTION: Featured landscape campaign video                       -->
     <!-- ============================================================================ -->
-    <section data-section="endorsement" class="bg-teal-950 py-24 sm:py-32">
+    <section data-section="main-video" id="video" class="bg-teal-950 py-24 sm:py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div class="reveal max-w-3xl mx-auto text-center mb-12">
-          <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-4">Endorsement</p>
-          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-white">A voice for Ward 4</h2>
-          <p class="mt-5 text-white/70 leading-relaxed">Hear from South Carolina State Senator Tom Davis about why he's supporting Tamara Becker's re-election.</p>
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-4">Watch</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-white">Protect Hilton Head <span class="text-ocean-300">for the next generation</span></h2>
+          <p class="mt-5 text-white/70 leading-relaxed">Hear directly from Tamara about her vision for Ward 4 and the island we all love.</p>
+        </div>
+        <div class="reveal max-w-4xl mx-auto">
+          <div class="relative w-full overflow-hidden rounded-2xl bg-black/40 aspect-video ring-1 ring-white/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,.55)]">
+            <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/GJ4XTaYrr-I?rel=0" title="Tamara Becker Ward 4 | Protect Hilton Head for the Next Generation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================================ -->
+    <!-- ENDORSEMENTS SECTION: Portrait (9:16) endorsement shorts, side by side       -->
+    <!-- Davis + Smith. Phone-style frames sized so they never overwhelm the page.    -->
+    <!-- ============================================================================ -->
+    <section data-section="endorsements" id="endorsements" class="bg-teal-950 py-24 sm:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+        <!-- Section header -->
+        <div class="reveal max-w-3xl mx-auto text-center mb-14">
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-4">Endorsements</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-white">Trusted voices <span class="text-ocean-300">stand with Tamara</span></h2>
+          <p class="mt-5 text-white/70 leading-relaxed">South Carolina's state leaders know who delivers for the Lowcountry. Hear why they're backing Tamara Becker for Ward 4.</p>
         </div>
 
-        <div class="reveal max-w-4xl mx-auto">
-          <div class="relative w-full overflow-hidden rounded-2xl bg-black/40 aspect-video">
-            <iframe class="w-full h-full" src="https://www.youtube.com/embed/3IAU91yGpmY?rel=0" title="Tom Davis Endorsement for Tamara Becker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+        <!-- Two portrait shorts, stacked on mobile, side by side from sm up -->
+        <div class="grid gap-10 sm:grid-cols-2 sm:gap-8 lg:gap-14 max-w-3xl lg:max-w-4xl mx-auto">
+
+          <!-- Endorsement 1: Senator Tom Davis -->
+          <figure class="reveal">
+            <div class="short-frame ring-1 ring-white/10">
+              <iframe src="https://www.youtube.com/embed/ufKVlYhyjxk?rel=0&playsinline=1" title="SC Senator Tom Davis Endorses Tamara Becker for Ward 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <figcaption class="mt-5 text-center">
+              <p class="font-display font-semibold text-xl text-white">Senator Tom Davis</p>
+              <p class="mt-1 text-sm uppercase tracking-[0.2em] text-ocean-300">South Carolina State Senate</p>
+            </figcaption>
+          </figure>
+
+          <!-- Endorsement 2: Representative Mark Smith -->
+          <figure class="reveal">
+            <div class="short-frame ring-1 ring-white/10">
+              <iframe src="https://www.youtube.com/embed/wuAZds5WQ2c?rel=0&playsinline=1" title="SC Representative Mark Smith Endorses Tamara Becker for Ward 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <figcaption class="mt-5 text-center">
+              <p class="font-display font-semibold text-xl text-white">Representative Mark Smith</p>
+              <p class="mt-1 text-sm uppercase tracking-[0.2em] text-ocean-300">South Carolina House of Representatives</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Channel link -->
+        <div class="reveal mt-14 text-center">
+          <a href="https://www.youtube.com/@beckerhhi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border-2 border-white/20 hover:border-ocean-400 text-white/85 hover:text-ocean-300 font-semibold px-7 py-3 rounded-full transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></svg>
+            <span>Watch more on YouTube</span>
+          </a>
         </div>
       </div>
     </section>
@@ -626,7 +687,7 @@
           <div class="max-w-3xl mx-auto px-6 sm:px-10">
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-5">The Platform</p>
             <h2 class="panel-anim font-display font-semibold text-4xl sm:text-6xl leading-tight">Pragmatic Solutions. <span class="text-ocean-300">Proven Results.</span></h2>
-            <p class="panel-anim mt-6 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Fiscal conservatism, island preservation, and smart growth management for Ward 4.</p>
+            <p class="panel-anim mt-6 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Unmatched fiscal strength, island preservation, proactive public safety, and balanced island life for Ward 4.</p>
             <div class="panel-anim mt-10 flex items-center gap-3 text-ocean-300 text-sm font-semibold uppercase tracking-[0.25em]">
               <span>Scroll to explore</span>
               <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
@@ -646,9 +707,9 @@
             <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Fiscal Conservatism</h3>
             <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Responsible budgeting and smart spending that protects taxpayers and ensures long-term financial stability for our town.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Conservative budget management and transparent spending decisions</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Prioritizing core services and infrastructure over unnecessary expansion</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Protecting taxpayers' interests in every capital project and budget cycle</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Unanimous AAA credit rating from all three major rating agencies</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Increased reserves in ALL municipal fund categories</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Property tax rates lowered—twice</li>
             </ul>
           </div>
         </div>
@@ -664,9 +725,9 @@
             <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Island Preservation</h3>
             <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Protecting Hilton Head's natural beauty, character, and quality of life while respecting tourism's role in our economy.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Defend green space, tree canopy, and natural habitats from unnecessary development</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Support managed, thoughtful growth that respects neighborhood character</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Balance tourism benefits with residential livability and community bonds</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>120+ acres of open space preserved to stop overdevelopment</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Dozens of Land Management Ordinance (LMO) amendments passed</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Stopped high-density growth that threatens island character</li>
             </ul>
           </div>
         </div>
@@ -679,12 +740,12 @@
               <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-300" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M3 21v-5h5"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-3">Pillar 03</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Pragmatic Growth</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Smart, sustainable development that meets our town's needs without sacrificing what makes Ward 4 special.</p>
+            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Proactive Public Safety</h3>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Safer streets and smarter infrastructure for everyone who lives on, works on, and visits Hilton Head Island.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Enforce zoning and ensure new projects align with neighborhood character</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Require infrastructure assessments before approving development</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Protect drainage, traffic flow, emergency response, and residential livability</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Island-wide public safety conditions assessment—initiated and funded</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>William Hilton Parkway (WHP) corridor infrastructure plans</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Multi-modal pathway upgrades for drivers, bicyclists, and pedestrians</li>
             </ul>
           </div>
         </div>
@@ -697,12 +758,12 @@
               <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-300" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
             <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-400 mb-3">Pillar 04</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Accessible Leadership</h3>
-            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Always available to listen. Responsive to your concerns. Dedicated to representing your voice on the Town Council.</p>
+            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl">Balanced Island Life</h3>
+            <p class="panel-anim mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">Neighborhood-first policies that put residents at the center of every decision, with tourism paying its own way.</p>
             <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-white/80">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Email always open at tammy4ward4@gmail.com</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Regular listening sessions and direct engagement with constituents</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Your concerns matter—always ready to advocate for Ward 4</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Neighborhood First policies in every council decision</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Tourism pays its own way—visitors help fund the services they use</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-300 shrink-0"></span>Elevated quality of life for residents, and an email always open at tammy4ward4@gmail.com</li>
             </ul>
             <a href="#get-involved" class="panel-anim inline-block mt-9 bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-8 py-3.5 rounded-full transition-colors">Get Involved</a>
           </div>
@@ -729,7 +790,7 @@
         <div class="reveal max-w-3xl mx-auto text-center">
           <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-4">Eight Years of Results</p>
           <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">What we've <span class="italic text-ocean-600">accomplished</span> together</h2>
-          <p class="mt-5 text-teal-800/75 leading-relaxed">Proven leadership that delivers real results for Ward 4. These are the outcomes that matter to you and your neighbors.</p>
+          <p class="mt-5 text-teal-800/75 leading-relaxed">Proven conservative leadership: less tax burden, safer streets, protected green space, and unmatched fiscal stability. Vote to re-elect Tamara Becker on November 3, 2026. She delivers!</p>
           <a href="#platform" class="inline-block mt-7 border-2 border-teal-900 text-teal-900 hover:bg-teal-900 hover:text-sand-50 font-semibold px-7 py-3 rounded-full transition-colors">Explore the full platform</a>
         </div>
 
@@ -756,8 +817,8 @@
                 <span class="w-11 h-11 rounded-full bg-teal-900 text-ocean-300 font-display font-semibold flex items-center justify-center shrink-0">1</span>
                 <svg viewBox="0 0 24 24" class="w-9 h-9 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"></path></svg>
               </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Fiscal responsibility in action</h3>
-              <p class="mt-3 text-teal-800/75 leading-relaxed">Three years of conservative budgeting, defending taxpayer interests, and ensuring every dollar spent serves our community wisely.</p>
+              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Unmatched fiscal strength</h3>
+              <p class="mt-3 text-teal-800/75 leading-relaxed">Achieved a AAA rating from all three major rating agencies, expanded reserves across every town fund, and lowered property tax rates—twice.</p>
             </article>
 
             <!-- Result 2 -->
@@ -766,8 +827,8 @@
                 <span class="w-11 h-11 rounded-full bg-teal-900 text-ocean-300 font-display font-semibold flex items-center justify-center shrink-0">2</span>
                 <svg viewBox="0 0 24 24" class="w-9 h-9 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"></circle><path d="M12 1v6m0 6v4"></path></svg>
               </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Protected what matters most</h3>
-              <p class="mt-3 text-teal-800/75 leading-relaxed">Advocated for environmental protection, neighborhood preservation, and quality of life while supporting the tourism that sustains our island economy.</p>
+              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Protected island character</h3>
+              <p class="mt-3 text-teal-800/75 leading-relaxed">Passed dozens of Land Management Ordinance (LMO) amendments and secured over 120 acres of land for preservation to stop overdevelopment on Hilton Head Island.</p>
             </article>
 
             <!-- Result 3 -->
@@ -776,8 +837,8 @@
                 <span class="w-11 h-11 rounded-full bg-teal-900 text-ocean-300 font-display font-semibold flex items-center justify-center shrink-0">3</span>
                 <svg viewBox="0 0 24 24" class="w-9 h-9 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
               </div>
-              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Listened and stayed accessible</h3>
-              <p class="mt-3 text-teal-800/75 leading-relaxed">Always available at tammy4ward4@gmail.com. Responsive to your concerns. Your voice matters, and I'm here to advocate for you.</p>
+              <h3 class="mt-5 font-sans font-bold text-2xl text-teal-900">Safer streets, smarter pathways</h3>
+              <p class="mt-3 text-teal-800/75 leading-relaxed">Initiated and funded an island-wide public safety assessment, launched the William Hilton Parkway (WHP) corridor redesign, and upgraded the multi-modal pathway network for drivers, bicyclists, and pedestrians.</p>
             </article>
           </div>
         </div>
@@ -847,6 +908,17 @@
           <!-- Status message (success / error feedback) -->
           <div id="donate-status" class="hidden mt-4 rounded-xl border p-4 text-sm" role="status" aria-live="polite"></div>
 
+          <!-- Divider + direct Stripe donation option -->
+          <div class="mt-6 flex items-center gap-4" aria-hidden="true">
+            <span class="h-px flex-1 bg-sand-200"></span>
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-teal-800/50">Or</span>
+            <span class="h-px flex-1 bg-sand-200"></span>
+          </div>
+          <a href="https://donate.stripe.com/4gMeVc59gd7p9RQdOb8k800" target="_blank" rel="noopener noreferrer" class="mt-5 w-full flex items-center justify-center gap-2.5 border-2 border-teal-900 text-teal-900 hover:bg-teal-900 hover:text-sand-50 font-bold text-base py-3.5 rounded-xl transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+            <span>Donate on our secure Stripe page</span>
+          </a>
+
           <p class="mt-5 text-xs text-teal-800/60 leading-relaxed">By donating, you support the campaign for Tamara Becker for Ward 4. Securely processed via Stripe.</p>
         </div>
       </div>
@@ -884,6 +956,17 @@
             <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-600 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg>
             <span>Questions? Email us at <a href="mailto:tammy4ward4@gmail.com" class="font-semibold text-teal-900 underline decoration-ocean-500 decoration-2 underline-offset-4 hover:text-ocean-600 transition-colors">tammy4ward4@gmail.com</a></span>
           </p>
+
+          <!-- Follow the campaign -->
+          <div class="mt-7 flex items-center gap-4">
+            <p class="text-sm font-semibold text-teal-800/80">Follow the campaign:</p>
+            <a href="https://www.facebook.com/reelecttammy2022" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on Facebook" class="w-11 h-11 rounded-full bg-teal-900 text-sand-50 hover:bg-ocean-500 flex items-center justify-center transition-colors">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"></path></svg>
+            </a>
+            <a href="https://www.youtube.com/@beckerhhi" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on YouTube" class="w-11 h-11 rounded-full bg-teal-900 text-sand-50 hover:bg-ocean-500 flex items-center justify-center transition-colors">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></svg>
+            </a>
+          </div>
         </div>
 
         <!-- Right column: supporter form -->
@@ -941,7 +1024,7 @@
   </main>
 
   <!-- ============================================================================ -->
-  <!-- FOOTER: Brand, explore links, contact info, and compliance line              -->
+  <!-- FOOTER: Brand, explore links, contact info, socials, and compliance line     -->
   <!-- ============================================================================ -->
   <footer data-section="footer" class="bg-teal-950 border-t border-white/10 pt-16 pb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -956,6 +1039,15 @@
             <span class="font-display font-semibold text-xl">Tamara Becker <span class="text-ocean-300">for Ward 4</span></span>
           </div>
           <p class="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">Fiscal conservatism. Island preservation. Proven results.</p>
+          <!-- Social icons -->
+          <div class="mt-6 flex items-center gap-3">
+            <a href="https://www.facebook.com/reelecttammy2022" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on Facebook" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-ocean-300 hover:border-ocean-300 transition-colors">
+              <svg viewBox="0 0 24 24" class="w-[18px] h-[18px]" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"></path></svg>
+            </a>
+            <a href="https://www.youtube.com/@beckerhhi" target="_blank" rel="noopener noreferrer" aria-label="Tamara Becker on YouTube" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:text-ocean-300 hover:border-ocean-300 transition-colors">
+              <svg viewBox="0 0 24 24" class="w-[18px] h-[18px]" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></svg>
+            </a>
+          </div>
         </div>
 
         <!-- Explore column (same-page anchors only) -->
@@ -963,10 +1055,12 @@
           <p class="text-xs font-bold uppercase tracking-[0.25em] text-ocean-400 mb-5">Explore</p>
           <ul class="space-y-3 text-sm">
             <li><a href="#about" class="text-white/70 hover:text-ocean-300 transition-colors">About Tamara</a></li>
-            <li>Paid for by Tamara Becker for Ward 4.</li>
             <li><a href="#platform" class="text-white/70 hover:text-ocean-300 transition-colors">Platform</a></li>
+            <li><a href="#endorsements" class="text-white/70 hover:text-ocean-300 transition-colors">Endorsements</a></li>
+            <li><a href="#results" class="text-white/70 hover:text-ocean-300 transition-colors">Results</a></li>
             <li><a href="#get-involved" class="text-white/70 hover:text-ocean-300 transition-colors">Get Involved</a></li>
             <li><a href="#donate" class="text-white/70 hover:text-ocean-300 transition-colors">Donate</a></li>
+            <li><a href="https://donate.stripe.com/4gMeVc59gd7p9RQdOb8k800" target="_blank" rel="noopener noreferrer" class="text-ocean-300 hover:text-ocean-400 font-semibold transition-colors">Donate via Stripe →</a></li>
           </ul>
         </div>
 
@@ -981,6 +1075,14 @@
             <li class="flex items-center gap-3">
               <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-300 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
               <span>Hilton Head Island, SC</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-300 shrink-0" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"></path></svg>
+              <a href="https://www.facebook.com/reelecttammy2022" target="_blank" rel="noopener noreferrer" class="hover:text-ocean-300 transition-colors">Facebook: @reelecttammy2022</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg viewBox="0 0 24 24" class="w-5 h-5 text-ocean-300 shrink-0" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 00.5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 002.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 002.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"></path></svg>
+              <a href="https://www.youtube.com/@beckerhhi" target="_blank" rel="noopener noreferrer" class="hover:text-ocean-300 transition-colors">YouTube: @beckerhhi</a>
             </li>
           </ul>
         </div>
