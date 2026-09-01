@@ -58,10 +58,6 @@
     @keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
     .animate-cue { animation: cue-bounce 1.8s ease-in-out infinite; }
 
-    /* ===== HORIZONTAL PLATFORM STRIP (pinned scroll scene) ===== */
-    .hstrip { height: 100vh; }
-    .platform-panel { flex: 0 0 100vw; height: 100vh; }
-
     /* ===== GHOST OUTLINE NUMBERS (decorative oversized numerals) ===== */
     .ghost-number {
       color: transparent;
