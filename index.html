@@ -799,114 +799,85 @@
         <!-- QR Code for Donations -->
         <div class="reveal mt-16 flex justify-center">
           <a href="https://donate.stripe.com/4gMeVc59gd7p9RQdOb8k800" target="_blank" rel="noopener noreferrer" class="inline-block hover:opacity-80 transition-opacity">
-            <img src="https://paymegpt.com/objects/quick-uploads/2/dded51f64a7a2e65.jpg" alt="Donate QR Code" class="w-auto h-64 sm:h-80 rounded-lg shadow-lg">
+            <img src="https://paymegpt.com/objects/quick-uploads/2/dded51f64a7a2e65.jpg" alt="Donate QR Code" class="w-auto h-48 sm:h-56 md:h-64 lg:h-80 max-w-full rounded-lg shadow-lg">
           </a>
         </div>
       </div>
     </section>
 
     <!-- ============================================================================ -->
-    <!-- PLATFORM SECTION: Pinned horizontal snap strip (GSAP ScrollTrigger)          -->
-    <!-- Bright alternating panels: white / sand / sky                                 -->
+    <!-- PLATFORM SECTION: Clean grid layout of four pillar cards (mobile friendly)   -->
     <!-- ============================================================================ -->
-    <section data-section="platform" id="platform" class="relative bg-sand-50 overflow-hidden">
-      <div class="hstrip flex" style="width: 500vw;">
+    <section data-section="platform" id="platform" class="relative bg-sand-50 py-24 sm:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
-        <!-- PANEL 0: Section introduction -->
-        <div class="platform-panel relative flex items-center bg-sand-50">
-          <div class="max-w-3xl mx-auto px-6 sm:px-10">
-            <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-5">The Platform</p>
-            <h2 class="panel-anim font-display font-semibold text-4xl sm:text-6xl leading-tight text-teal-950">Pragmatic Solutions. <span class="text-ocean-500">Proven Results.</span></h2>
-            <p class="panel-anim mt-6 text-teal-900/70 text-base sm:text-lg leading-relaxed max-w-xl">Unmatched fiscal strength, island preservation, proactive public safety, and balanced island life for Ward 4.</p>
-            <div class="panel-anim mt-10 flex items-center gap-3 text-ocean-500 text-sm font-semibold uppercase tracking-[0.25em]">
-              <span>Scroll to explore</span>
-              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-            </div>
-          </div>
-          <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">4</span>
+        <!-- Section header -->
+        <div class="reveal max-w-3xl mx-auto text-center mb-16">
+          <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-4">The Platform</p>
+          <h2 class="font-display font-semibold text-4xl sm:text-5xl leading-tight text-teal-950">Pragmatic Solutions. <span class="text-ocean-500">Proven Results.</span></h2>
+          <p class="mt-6 text-teal-900/70 leading-relaxed">Unmatched fiscal strength, island preservation, proactive public safety, and balanced island life for Ward 4.</p>
         </div>
 
-        <!-- PANEL 1: Fiscal Conservatism -->
-        <div class="platform-panel relative flex items-center bg-white">
-          <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">01</span>
-          <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
-            <div class="panel-anim w-16 h-16 rounded-2xl bg-ocean-500/10 border border-ocean-500/30 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 01</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl text-teal-950">Fiscal Conservatism</h3>
-            <p class="panel-anim mt-5 text-teal-900/70 text-base sm:text-lg leading-relaxed max-w-xl">Responsible budgeting and smart spending that protects taxpayers and ensures long-term financial stability for our town.</p>
-            <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-teal-900/85">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Unanimous AAA credit rating from all three major rating agencies</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Increased reserves in ALL municipal fund categories</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Property tax rates lowered—twice</li>
+        <!-- Pillar cards grid: 1 col mobile, 2 cols sm, 2 cols md, 2 cols lg -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-5xl mx-auto mb-14">
+
+          <!-- Pillar 1: Fiscal Conservatism -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-9 relative overflow-hidden">
+            <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 01</p>
+            <h3 class="font-display font-semibold text-2xl sm:text-3xl text-teal-950">Fiscal Conservatism</h3>
+            <p class="mt-4 text-teal-800/75 leading-relaxed">Responsible budgeting and smart spending that protects taxpayers and ensures long-term financial stability for our town.</p>
+            <ul class="mt-6 space-y-3 text-sm sm:text-base text-teal-900/85">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Unanimous AAA credit rating from all three major rating agencies</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Increased reserves in ALL municipal fund categories</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Property tax rates lowered—twice</span></li>
             </ul>
-          </div>
-        </div>
+            <div class="mt-7 h-1 w-16 bg-ocean-500 rounded-full"></div>
+          </article>
 
-        <!-- PANEL 2: Island Preservation -->
-        <div class="platform-panel relative flex items-center bg-sky-50">
-          <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">02</span>
-          <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
-            <div class="panel-anim w-16 h-16 rounded-2xl bg-ocean-500/10 border border-ocean-500/30 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            </div>
-            <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 02</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl text-teal-950">Island Preservation</h3>
-            <p class="panel-anim mt-5 text-teal-900/70 text-base sm:text-lg leading-relaxed max-w-xl">Protecting Hilton Head's natural beauty, character, and quality of life while respecting tourism's role in our economy.</p>
-            <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-teal-900/85">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>120+ acres of open space preserved to stop overdevelopment</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Dozens of Land Management Ordinance (LMO) amendments passed</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Stopped high-density growth that threatens island character</li>
+          <!-- Pillar 2: Island Preservation -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-9 relative overflow-hidden">
+            <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 02</p>
+            <h3 class="font-display font-semibold text-2xl sm:text-3xl text-teal-950">Island Preservation</h3>
+            <p class="mt-4 text-teal-800/75 leading-relaxed">Protecting Hilton Head's natural beauty, character, and quality of life while respecting tourism's role in our economy.</p>
+            <ul class="mt-6 space-y-3 text-sm sm:text-base text-teal-900/85">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>120+ acres of open space preserved to stop overdevelopment</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Dozens of Land Management Ordinance (LMO) amendments passed</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Stopped high-density growth that threatens island character</span></li>
             </ul>
-          </div>
-        </div>
+            <div class="mt-7 h-1 w-16 bg-ocean-500 rounded-full"></div>
+          </article>
 
-        <!-- PANEL 3: Proactive Public Safety -->
-        <div class="platform-panel relative flex items-center bg-white">
-          <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">03</span>
-          <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
-            <div class="panel-anim w-16 h-16 rounded-2xl bg-ocean-500/10 border border-ocean-500/30 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M3 21v-5h5"></path></svg>
-            </div>
-            <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 03</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl text-teal-950">Proactive Public Safety</h3>
-            <p class="panel-anim mt-5 text-teal-900/70 text-base sm:text-lg leading-relaxed max-w-xl">Safer streets and smarter infrastructure for everyone who lives on, works on, and visits Hilton Head Island.</p>
-            <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-teal-900/85">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Island-wide public safety conditions assessment—initiated and funded</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>William Hilton Parkway (WHP) corridor infrastructure plans</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Multi-modal pathway upgrades for drivers, bicyclists, and pedestrians</li>
+          <!-- Pillar 3: Proactive Public Safety -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-9 relative overflow-hidden">
+            <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 03</p>
+            <h3 class="font-display font-semibold text-2xl sm:text-3xl text-teal-950">Proactive Public Safety</h3>
+            <p class="mt-4 text-teal-800/75 leading-relaxed">Safer streets and smarter infrastructure for everyone who lives on, works on, and visits Hilton Head Island.</p>
+            <ul class="mt-6 space-y-3 text-sm sm:text-base text-teal-900/85">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Island-wide public safety conditions assessment—initiated and funded</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>William Hilton Parkway (WHP) corridor infrastructure plans</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Multi-modal pathway upgrades for drivers, bicyclists, and pedestrians</span></li>
             </ul>
-          </div>
-        </div>
+            <div class="mt-7 h-1 w-16 bg-ocean-500 rounded-full"></div>
+          </article>
 
-        <!-- PANEL 4: Balanced Island Life -->
-        <div class="platform-panel relative flex items-center bg-sky-50">
-          <span class="ghost-number absolute right-4 bottom-6 text-[34vw] sm:text-[24vw]" aria-hidden="true">04</span>
-          <div class="max-w-3xl mx-auto px-6 sm:px-10 relative z-10">
-            <div class="panel-anim w-16 h-16 rounded-2xl bg-ocean-500/10 border border-ocean-500/30 flex items-center justify-center mb-7">
-              <svg viewBox="0 0 24 24" class="w-8 h-8 text-ocean-500" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <p class="panel-anim text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 04</p>
-            <h3 class="panel-anim font-display font-semibold text-3xl sm:text-5xl text-teal-950">Balanced Island Life</h3>
-            <p class="panel-anim mt-5 text-teal-900/70 text-base sm:text-lg leading-relaxed max-w-xl">Neighborhood-first policies that put residents at the center of every decision, with tourism paying its own way.</p>
-            <ul class="panel-anim mt-7 space-y-2.5 text-sm sm:text-base text-teal-900/85">
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Neighborhood First policies in every council decision</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Tourism pays its own way—visitors help fund the services they use</li>
-              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-2 rounded-full bg-ocean-500 shrink-0"></span>Elevated quality of life for residents, and an email always open at tammy4ward4@gmail.com</li>
+          <!-- Pillar 4: Balanced Island Life -->
+          <article class="reveal lift-card bg-white rounded-2xl border border-sand-200 p-7 sm:p-9 relative overflow-hidden">
+            <p class="text-xs font-bold tracking-[0.3em] uppercase text-ocean-600 mb-3">Pillar 04</p>
+            <h3 class="font-display font-semibold text-2xl sm:text-3xl text-teal-950">Balanced Island Life</h3>
+            <p class="mt-4 text-teal-800/75 leading-relaxed">Neighborhood-first policies that put residents at the center of every decision, with tourism paying its own way.</p>
+            <ul class="mt-6 space-y-3 text-sm sm:text-base text-teal-900/85">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Neighborhood First policies in every council decision</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Tourism pays its own way—visitors help fund the services they use</span></li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 mt-1.5 rounded-full bg-ocean-500 shrink-0"></span><span>Elevated quality of life for residents, and an email always open at tammy4ward4@gmail.com</span></li>
             </ul>
-            <a href="#get-involved" class="panel-anim inline-block mt-9 bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-8 py-3.5 rounded-full transition-colors">Get Involved</a>
-          </div>
+            <div class="mt-7 h-1 w-16 bg-ocean-500 rounded-full"></div>
+          </article>
         </div>
-      </div>
 
-      <!-- Strip progress dots (updated by ScrollTrigger onUpdate) -->
-      <div id="strip-dots" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2" aria-hidden="true">
-        <span class="strip-dot block h-2 w-6 rounded-full bg-ocean-500 transition-all duration-300"></span>
-        <span class="strip-dot block h-2 w-2 rounded-full bg-teal-900/25 transition-all duration-300"></span>
-        <span class="strip-dot block h-2 w-2 rounded-full bg-teal-900/25 transition-all duration-300"></span>
-        <span class="strip-dot block h-2 w-2 rounded-full bg-teal-900/25 transition-all duration-300"></span>
-        <span class="strip-dot block h-2 w-2 rounded-full bg-teal-900/25 transition-all duration-300"></span>
+        <!-- CTA -->
+        <div class="reveal text-center">
+          <a href="#get-involved" class="inline-block bg-ocean-500 hover:bg-ocean-400 text-white font-bold px-8 py-4 rounded-full transition-colors hover:shadow-[0_16px_40px_-12px_rgba(200,16,46,.55)]">Get Involved</a>
+        </div>
       </div>
     </section>
 
@@ -1329,54 +1300,6 @@
       y: 40, autoAlpha: 0, stagger: 0.12, duration: 0.9, ease: 'power3.out',
       scrollTrigger: { trigger: '[data-section="quote-band"]', start: 'top 70%', once: true }
     });
-
-    (function () {
-      var panels = gsap.utils.toArray('.platform-panel');
-      var dots = document.querySelectorAll('.strip-dot');
-
-      var stripTween = gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.hstrip',
-          pin: true,
-          scrub: 1,
-          snap: 1 / (panels.length - 1),
-          end: '+=3000',
-          onUpdate: function (self) {
-            var active = Math.round(self.progress * (panels.length - 1));
-            dots.forEach(function (dot, i) {
-              var isActive = i === active;
-              dot.classList.toggle('bg-ocean-500', isActive);
-              dot.classList.toggle('w-6', isActive);
-              dot.classList.toggle('bg-teal-900/25', !isActive);
-              dot.classList.toggle('w-2', !isActive);
-            });
-          }
-        }
-      });
-
-      panels.forEach(function (panel) {
-        var items = panel.querySelectorAll('.panel-anim');
-        gsap.from(items, {
-          y: 60, autoAlpha: 0, stagger: 0.08, duration: 0.8, ease: 'power3.out',
-          scrollTrigger: {
-            trigger: panel, containerAnimation: stripTween,
-            start: 'left 75%', toggleActions: 'play none none reverse'
-          }
-        });
-        var ghost = panel.querySelector('.ghost-number');
-        if (ghost) {
-          gsap.fromTo(ghost, { xPercent: 8 }, {
-            xPercent: -8, ease: 'none',
-            scrollTrigger: {
-              trigger: panel, containerAnimation: stripTween,
-              start: 'left right', end: 'right left', scrub: true
-            }
-          });
-        }
-      });
-    })();
 
     /* ===== RESULTS SVG PATH DRAW + TRACER DOT (straight vertical line) ===== */
     (function () {
