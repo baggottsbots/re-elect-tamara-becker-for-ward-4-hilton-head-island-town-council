@@ -118,3 +118,34 @@
       color: white; display: flex; align-items: center; justify-content: center;
       font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem;
     }
+
+    /* ===== EVENTS CALENDAR: date column, event cards, access badges ===== */
+    .event-card {
+      background: #FFFFFF; border: 1px solid #EAE3D6; border-radius: 1.25rem;
+      padding: 1.25rem 1.25rem; display: flex; gap: 1.25rem; align-items: flex-start;
+    }
+    @media (min-width: 640px) { .event-card { padding: 1.5rem 1.75rem; gap: 1.75rem; } }
+    .event-card.event-open {
+      border: 2px solid rgba(200,16,46,.35);
+      box-shadow: 0 16px 40px -22px rgba(11,30,56,.3);
+    }
+    .event-date {
+      flex-shrink: 0; width: 4.25rem; text-align: center;
+      border-right: 1px solid #EAE3D6; padding-right: 1rem; align-self: stretch;
+    }
+    .event-date .dow { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(26,54,96,.6); }
+    .event-date .day { font-family: 'Fraunces', Georgia, serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-top: .25rem; color: #0B1E38; }
+    .event-date .mon { font-size: 11px; font-weight: 600; color: rgba(26,54,96,.6); margin-top: .25rem; }
+    .event-open .event-date .dow, .event-open .event-date .day { color: #C8102E; }
+    .event-body { flex: 1; min-width: 0; }
+    .event-item + .event-item { border-top: 1px solid #EAE3D6; padding-top: 1.25rem; margin-top: 1.25rem; }
+    .event-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: .5rem; }
+    .event-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.25rem; line-height: 1.25; color: #0B1E38; }
+    @media (min-width: 640px) { .event-title { font-size: 1.5rem; } }
+    .event-time { margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #12294A; }
+    .event-place { font-size: .875rem; color: rgba(26,54,96,.7); }
+    .badge { font-size: 11px; font-weight: 600; padding: .3rem .75rem; border-radius: 9999px; white-space: nowrap; }
+    .badge-open { background: #C8102E; color: #FFFFFF; }
+    .badge-rsvp { background: #12294A; color: #FBFAF7; }
+    .badge-private { background: #EAE3D6; color: #12294A; }
+    .badge-soon { background: rgba(200,16,46,.1); color: #A50E27; border: 1px solid rgba(200,16,46,.3); }
