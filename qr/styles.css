@@ -1,0 +1,151 @@
+/* ==========================================================================
+       GLOBAL STYLES — Bright island edition
+       Mobile-first. Breakpoints: sm(640px) md(768px) lg(1024px) xl(1280px)
+       ========================================================================== */
+
+    /* ===== Smooth anchor scrolling + base body behavior ===== */
+    html { scroll-behavior: smooth; }
+    body { overscroll-behavior: none; overflow-x: hidden; }
+
+    /* ===== Anchor offset so fixed navbar never covers section headings ===== */
+    section[id] { scroll-margin-top: 96px; }
+
+    /* ===== Brand text selection color ===== */
+    ::selection { background: #C8102E; color: #FFFFFF; }
+
+    /* ===== Accessible focus ring for keyboard users ===== */
+    :focus-visible { outline: 2px solid #C8102E; outline-offset: 3px; border-radius: 4px; }
+
+    /* ===== SCROLL PROGRESS BAR (top of viewport, red) ===== */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #A50E27, #E63946);
+      transform-origin: left center; z-index: 80; pointer-events: none;
+    }
+
+    /* ===== FILM GRAIN OVERLAY (very subtle paper texture) ===== */
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ===== HERO: bright island scene photo with sunlit overlay ===== */
+    .hero-island {
+      position: relative;
+      background: linear-gradient(180deg, #F2F7FB 0%, #FBFAF7 100%);
+    }
+    .hero-island::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: url('https://paymegpt.com/objects/quick-uploads/2/fcf2834e0a0651d1.png');
+      background-size: cover; background-position: center 65%;
+    }
+    .hero-island::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(251,250,247,.92) 0%,
+        rgba(251,250,247,.82) 35%,
+        rgba(251,250,247,.66) 60%,
+        rgba(251,250,247,.94) 100%);
+    }
+    .hero-island > * { position: relative; z-index: 2; }
+
+    /* ===== TICKER / MARQUEE BAND (infinite horizontal scroll) ===== */
+    @keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .ticker-track { display: flex; width: max-content; animation: ticker-scroll 24s linear infinite; }
+    .ticker-band { transform: scale(1.02); }
+
+    /* ===== SCROLL CUE BOUNCE (hero bottom) ===== */
+    @keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+    .animate-cue { animation: cue-bounce 1.8s ease-in-out infinite; }
+
+    /* ===== GHOST OUTLINE NUMBERS (decorative oversized numerals) ===== */
+    .ghost-number {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(200, 16, 46, .18);
+      font-family: 'Fraunces', Georgia, serif;
+      line-height: .8; user-select: none;
+    }
+
+    /* ===== PRIORITIES SVG PATH (drawn on scroll, straight line) ===== */
+    #priorities-line-path { stroke: #C8102E; }
+    .tracer-dot {
+      position: absolute; top: 0; left: 0; width: 16px; height: 16px; border-radius: 9999px;
+      background: #D62839; box-shadow: 0 0 0 6px rgba(200,16,46,.18), 0 0 24px rgba(200,16,46,.45);
+      z-index: 10; pointer-events: none;
+    }
+
+    /* ===== DONATION PRESET BUTTON STATES ===== */
+    .preset-btn { transition: all .2s ease; }
+    .preset-active { background: #C8102E !important; color: #FFFFFF !important; border-color: #C8102E !important; }
+
+    /* ===== NAV SCROLLED STATE (toggled by JS) ===== */
+    .nav-scrolled { background: rgba(251,250,247,.92); box-shadow: 0 8px 30px rgba(11,30,56,.12); }
+
+    /* ===== MOBILE MENU OVERLAY TRANSITION (bright) ===== */
+    #mobile-menu { transition: opacity .3s ease, visibility .3s ease; background: #FBFAF7; }
+    #mobile-menu.menu-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    #mobile-menu.menu-visible { opacity: 1; visibility: visible; }
+
+    /* ===== CARD HOVER LIFT (about + involvement cards) ===== */
+    .lift-card { transition: transform .35s ease, box-shadow .35s ease; }
+    .lift-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -18px rgba(11,30,56,.22); }
+
+    /* ===== ENDORSEMENT SHORTS: portrait 9:16 video frames ===== */
+    .short-frame {
+      position: relative; width: 100%; aspect-ratio: 9 / 16;
+      border-radius: 1.25rem; overflow: hidden; background: rgba(11,30,56,.08);
+      box-shadow: 0 24px 60px -20px rgba(11,30,56,.35);
+    }
+    .short-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    /* ===== TEXT ENDORSEMENT QUOTE CARD ===== */
+    .endorsement-quote {
+      background: white; border: 1px solid rgba(11, 30, 56, .08); border-radius: 1.5rem;
+      padding: 2.25rem 2rem 2rem; box-shadow: 0 12px 32px rgba(11, 30, 56, .08);
+      position: relative;
+    }
+    .endorsement-quote-mark {
+      width: 3rem; height: 3rem; border-radius: 9999px;
+      background: rgba(200, 16, 46, .08);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .endorsement-quote-mark svg { width: 1.35rem; height: 1.35rem; color: #C8102E; }
+    .endorsement-name-row { display: flex; align-items: center; gap: .875rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(11, 30, 56, .08); }
+    .endorsement-avatar {
+      width: 2.75rem; height: 2.75rem; border-radius: 9999px; flex-shrink: 0;
+      background: linear-gradient(135deg, #12294A, #2C4E7C);
+      color: white; display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.05rem;
+    }
+
+    /* ===== EVENTS CALENDAR: date column, event cards, access badges ===== */
+    .event-card {
+      background: #FFFFFF; border: 1px solid #EAE3D6; border-radius: 1.25rem;
+      padding: 1.25rem 1.25rem; display: flex; gap: 1.25rem; align-items: flex-start;
+    }
+    @media (min-width: 640px) { .event-card { padding: 1.5rem 1.75rem; gap: 1.75rem; } }
+    .event-card.event-open {
+      border: 2px solid rgba(200,16,46,.35);
+      box-shadow: 0 16px 40px -22px rgba(11,30,56,.3);
+    }
+    .event-date {
+      flex-shrink: 0; width: 4.25rem; text-align: center;
+      border-right: 1px solid #EAE3D6; padding-right: 1rem; align-self: stretch;
+    }
+    .event-date .dow { font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(26,54,96,.6); }
+    .event-date .day { font-family: 'Fraunces', Georgia, serif; font-size: 2.5rem; font-weight: 700; line-height: 1; margin-top: .25rem; color: #0B1E38; }
+    .event-date .mon { font-size: 11px; font-weight: 600; color: rgba(26,54,96,.6); margin-top: .25rem; }
+    .event-open .event-date .dow, .event-open .event-date .day { color: #C8102E; }
+    .event-body { flex: 1; min-width: 0; }
+    .event-item + .event-item { border-top: 1px solid #EAE3D6; padding-top: 1.25rem; margin-top: 1.25rem; }
+    .event-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: .5rem; }
+    .event-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.25rem; line-height: 1.25; color: #0B1E38; }
+    @media (min-width: 640px) { .event-title { font-size: 1.5rem; } }
+    .event-time { margin-top: .5rem; font-size: .875rem; font-weight: 600; color: #12294A; }
+    .event-place { font-size: .875rem; color: rgba(26,54,96,.7); }
+    .badge { font-size: 11px; font-weight: 600; padding: .3rem .75rem; border-radius: 9999px; white-space: nowrap; }
+    .badge-open { background: #C8102E; color: #FFFFFF; }
+    .badge-rsvp { background: #12294A; color: #FBFAF7; }
+    .badge-private { background: #EAE3D6; color: #12294A; }
+    .badge-soon { background: rgba(200,16,46,.1); color: #A50E27; border: 1px solid rgba(200,16,46,.3); }
